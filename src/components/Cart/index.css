@@ -1,0 +1,104 @@
+.cart-container {
+  display: flex;
+  justify-content: center;
+  min-height: 75vh;
+}
+
+@media screen and (min-width: 768px) {
+  .cart-container {
+    min-height: 90vh;
+  }
+}
+
+.cart-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1110px;
+}
+
+@media screen and (min-width: 768px) {
+  .cart-content-container {
+    width: 80%;
+    max-width: 1110px;
+  }
+}
+
+.cart-heading {
+  color: #3e4c59;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .cart-heading {
+    font-size: 48px;
+  }
+}
+
+/* Write your CSS here */
+.remove-all-button {
+  color: #0b69ff;
+  font-size: 15px;
+  font-family: 'Roboto';
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: right;
+}
+
+.checkout-container {
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.total-items-price-container {
+  align-self: flex-end;
+}
+.order-total {
+  font-size: 15px;
+  color: #64748b;
+  font-family: 'Roboto';
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.total-price {
+  color: #000000;
+}
+.items-total {
+  font-size: 13px;
+  color: #64748b;
+  font-family: 'Roboto';
+  margin-top: 0px;
+}
+
+.checkout-button {
+  background-color: #0b69ff;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 13px;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .checkout-container {
+    align-self: flex-end;
+  }
+  .order-total {
+    font-size: 20px;
+  }
+  .total-price {
+    font-size: 25px;
+  }
+  .items-total {
+    font-size: 18px;
+  }
+  .checkout-button {
+    padding: 10px 40px;
+  }
+}
