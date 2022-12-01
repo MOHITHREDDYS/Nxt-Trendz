@@ -17,9 +17,11 @@ const Cart = () => (
       }
 
       let totalPrice = 0
-      cartList.forEach(item => {
-        totalPrice += item.price * item.quantity
-      })
+      if (cartList.length > 0) {
+        cartList.forEach(item => {
+          totalPrice += item.price * item.quantity
+        })
+      }
 
       return (
         <>
