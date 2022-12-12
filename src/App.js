@@ -15,6 +15,7 @@ import './App.css'
 class App extends Component {
   state = {
     cartList: [],
+    activeProductId: '',
   }
 
   //   TODO: Add your code for remove all cart items, increment cart item quantity, decrement cart item quantity, remove cart item
@@ -80,8 +81,12 @@ class App extends Component {
     })
   }
 
+  changeActiveProductId = id => {
+    this.setState({activeProductId: id})
+  }
+
   render() {
-    const {cartList} = this.state
+    const {cartList, activeProductId} = this.state
 
     return (
       <CartContext.Provider
@@ -92,6 +97,8 @@ class App extends Component {
           removeAllCartItems: this.removeAllCartItems,
           incrementCartItemQuantity: this.incrementCartItemQuantity,
           decrementCartItemQuantity: this.decrementCartItemQuantity,
+          activeProductId,
+          changeActiveProductId: this.changeActiveProductId,
         }}
       >
         <Switch>
@@ -101,6 +108,7 @@ class App extends Component {
           <ProtectedRoute
             exact
             path="/products/:id"
+            key={activeProductId}
             component={ProductItemDetails}
           />
           <ProtectedRoute exact path="/cart" component={Cart} />
